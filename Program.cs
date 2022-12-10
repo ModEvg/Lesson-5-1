@@ -1,24 +1,21 @@
-﻿/* Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
-[3, 7, 23, 12] -> 19
-[-4, -6, 89, 6] -> 0*/
+﻿/* Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+[3 7 22 2 78] -> 76*/
 
 Console.Write($"Введите размер массива \n");
 int A = int.Parse(Console.ReadLine()!);
-int [] massiv = new int[A];
-int summa = 0;
-
+int[]massiv = new int[A];
 for (int i = 0; i<A; i++)
-    {
-         massiv[i] = new Random().Next(-100,100); // Задаем массив
+    {   
+        Console.WriteLine($"{i} элемент массива");
+        massiv[i] = int.Parse(Console.ReadLine()!); // Задаем массив
     }
-Print();
+int max = massiv[0];
+int min = massiv[0];
 
-for (int i = 1; i<A;)
-    {
-        summa=summa+massiv[i];
-        i=i+2;
-    }
-Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях, равна {summa} \n");
+Print();
+maximum();
+minimum();
+Console.WriteLine($"Разница между максимальным значением, равным {max}, и минимальным значением, равным {min}, элементами массива равна {max-min}\n");
 
 void Print()
     {
@@ -26,4 +23,22 @@ void Print()
             {
                 Console.Write($"{massiv[i]} "); 
             }   
+    }
+
+void maximum()
+    {
+        for (int i = 1; i<A; i++)
+        {
+            if (max<massiv[i])
+            max = massiv[i];
+        }
+    }
+
+void minimum()
+    {
+        for (int i = 1; i<A; i++)
+        {
+            if (massiv[i]<min)
+            min = massiv[i];
+        }
     }
