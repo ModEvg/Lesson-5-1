@@ -18,7 +18,6 @@ for (int i = 1; i<A;)
         summa=summa+massiv[i];
         i=i+2;
     }
-Console.WriteLine($"\n");
 Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях, равна {summa} \n");
 
 void Print()
