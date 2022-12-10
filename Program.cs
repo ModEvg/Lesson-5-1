@@ -3,14 +3,14 @@
 
 Console.Write($"Введите размер массива \n");
 int A = int.Parse(Console.ReadLine()!);
-int[]massiv = new int[A];
+double[]massiv = new double[A];
 for (int i = 0; i<A; i++)
     {   
         Console.WriteLine($"{i} элемент массива");
-        massiv[i] = int.Parse(Console.ReadLine()!); // Задаем массив
+        massiv[i] = double.Parse(Console.ReadLine()!); // Задаем массив
     }
-int max = massiv[0];
-int min = massiv[0];
+double max = massiv[0];
+double min = massiv[0];
 
 Print();
 maximum();
