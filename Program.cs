@@ -18,7 +18,6 @@ for (int i = 0; i<A; i++)
         if (massiv[i]%2 == 0) 
         summa=summa+1;
     }
-Console.WriteLine($"\n");
 Console.WriteLine($"Количество четных чисел равно {summa} \n");
 
 void Print()
